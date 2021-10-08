@@ -16,7 +16,7 @@ simplicity's sake.
 Install the project via `composer` as per usual:
 
 ```
-composer require --dev brekitomasson/php-cs-fixer-config
+composer require --dev brekitomasson/php-cs-fixer-breki-config
 ```
 
 Once installed into your project, the RuleSet can be used by `php-cs-fixer` by generating your own `.php-cs-fixer` file
