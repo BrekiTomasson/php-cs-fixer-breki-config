@@ -1,0 +1,30 @@
+{
+  "name": "brekitomasson/php-cs-fixer-breki-config",
+  "description": "My configuration for PHP-CS-Fixer",
+  "minimum-stability": "stable",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "brekitomasson",
+      "email": "breki.tomasson@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BrekiTomasson\\PhpCsFixer\\Config\\": "src"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-filter": "*",
+    "friendsofphp/php-cs-fixer": "~v3.2.1"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
