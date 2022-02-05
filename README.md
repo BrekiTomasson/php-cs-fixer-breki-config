@@ -67,7 +67,6 @@ these were very useful to me to read for inspiration of how to structure the cod
 - [This repo by `localheinz`](https://github.com/localheinz/php-cs-fixer-config), also for inspiration on how best to
   structure this kind of project and organize my files.
 
-
 ## Licence
 
 This code is published under the [MIT Licence](https://opensource.org/licenses/MIT). Feel free to do what you want with
