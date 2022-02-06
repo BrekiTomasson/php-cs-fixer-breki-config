@@ -1,5 +1,7 @@
 <?php
 
+include(__DIR__ . '/vendor/autoload.php');
+
 use BrekiTomasson\PhpCsFixer\Config\Exceptions\InvalidPhpVersion;
 use BrekiTomasson\PhpCsFixer\Config\Factory;
 use BrekiTomasson\PhpCsFixer\Config\RuleSet\Php8;
