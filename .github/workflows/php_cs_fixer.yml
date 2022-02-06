@@ -8,12 +8,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2.4.0
+        uses: "actions/checkout@v2.4.0"
         with:
           ref: ${{ github.head_ref }}
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2.16.0
+        uses: "shivammathur/setup-php@2.16.0"
         with:
           coverage: "none"
           php-version: '8.1'
