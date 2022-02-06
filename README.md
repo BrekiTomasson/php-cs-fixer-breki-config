@@ -1,5 +1,7 @@
 # php-cs-fixer-breki-config
 
+[![Check & fix styling](https://github.com/BrekiTomasson/php-cs-fixer-breki-config/actions/workflows/php_cs_fixer.yml/badge.svg)](https://github.com/BrekiTomasson/php-cs-fixer-breki-config/actions/workflows/php_cs_fixer.yml)
+
 My own personal preferences for `php-cs-fixer` configuration. This is largely based on legibility and being able to
 understand the code quickly when reading it and places no emphasis on being compact, minimalistic or anything like that.
 
@@ -25,13 +27,21 @@ with contents similar to the following:
 ```
 <?php
 
-use BrekiTomasson\PhpCsFixer\Config;
+use BrekiTomasson\PhpCsFixer\Config\Exceptions\InvalidPhpVersion;
+use BrekiTomasson\PhpCsFixer\Config\Factory;
+use BrekiTomasson\PhpCsFixer\Config\RuleSet\Php8;
 
-$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php8);
+$ruleSet = new Php8();
 
-$config->getFinder()->in(__DIR__);
+try {
+    $configuration = Factory::fromRuleSet($ruleSet);
+    $configuration->getFinder()->in(__DIR__ . '/' . 'src');
+    $configuration->setCacheFile(__DIR__ . '/.build/php-cs-fixer/php-cs-fixer.cache');
 
-return $config;
+    return $configuration;
+} catch (InvalidPhpVersion $exception) {
+    echo 'Failed to generate php-cs-fixer configuration: ' . $exception->getMessage() . PHP_EOL;
+}
 ```
 
 ## Future Plans and Ambitions

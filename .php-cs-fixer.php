@@ -1,11 +1,17 @@
 <?php
 
-$ruleSet = new BrekiTomasson\PhpCsFixer\Config\RuleSet\Php8;
+use BrekiTomasson\PhpCsFixer\Config\Exceptions\InvalidPhpVersion;
+use BrekiTomasson\PhpCsFixer\Config\Factory;
+use BrekiTomasson\PhpCsFixer\Config\RuleSet\Php8;
 
-$configuration = BrekiTomasson\PhpCsFixer\Config\Factory::fromRuleSet($ruleSet);
+$ruleSet = new Php8();
 
-$configuration->getFinder()->in('src');
+try {
+    $configuration = Factory::fromRuleSet($ruleSet);
+    $configuration->getFinder()->in(__DIR__ . '/' . 'src');
+    $configuration->setCacheFile(__DIR__ . '/.build/php-cs-fixer/php-cs-fixer.cache');
 
-$configuration->setCacheFile(__DIR__ . '/.build/php-cs-fixer/php-cs-fixer.cache');
-
-return $configuration;
+    return $configuration;
+} catch (InvalidPhpVersion $exception) {
+    echo 'Failed to generate php-cs-fixer configuration: ' . $exception->getMessage() . PHP_EOL;
+}

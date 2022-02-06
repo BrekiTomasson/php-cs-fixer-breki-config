@@ -10,21 +10,21 @@
       "email": "breki.tomasson@gmail.com"
     }
   ],
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "secure-http": true,
+    "sort-packages": true,
+    "store-auths": true
+  },
   "autoload": {
     "psr-4": {
-      "BrekiTomasson\\PhpCsFixer\\Config\\": "src"
+      "BrekiTomasson\\PhpCsFixer\\Config\\": "src/"
     }
   },
   "require": {
     "php": "^8.0",
     "ext-filter": "*",
     "friendsofphp/php-cs-fixer": "^v3.5"
-  },
-  "config": {
-    "platform": {
-      "php": "8.0"
-    },
-    "preferred-install": "dist",
-    "sort-packages": true
   }
 }

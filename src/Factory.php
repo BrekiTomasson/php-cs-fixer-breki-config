@@ -9,6 +9,9 @@ use PhpCsFixer\Config;
 
 class Factory
 {
+    /**
+     * @throws InvalidPhpVersion
+     */
     public static function fromRuleSet(RuleSet $ruleSet, array $overrideRuleSet = []) : Config
     {
         self::assertPhpVersion($ruleSet->getTargetPhpVersion());
@@ -27,6 +30,7 @@ class Factory
 
     /**
      * @see PHP_VERSION_ID in https://www.php.net/manual/en/reserved.constants.php
+     * @throws InvalidPhpVersion
      */
     protected static function assertPhpVersion(int $ruleSetPhpVersion) : void
     {
