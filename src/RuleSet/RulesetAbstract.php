@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace BrekiTomasson\PhpCsFixer\Config\RuleSet;
 
 use BrekiTomasson\PhpCsFixer\Config\RuleSet;
@@ -9,9 +11,7 @@ use BrekiTomasson\PhpCsFixer\Config\RuleSet;
  */
 abstract class RulesetAbstract implements RuleSet
 {
-    /**
-     * A list of tags that should be ignored by fixers related to Doctrine.
-     */
+    /** A list of tags that should be ignored by fixers related to Doctrine. */
     protected const DOCTRINE_IGNORED_TAGS = [
         'abstract',
         'access',

@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace BrekiTomasson\PhpCsFixer\Config\Exceptions;
 
-class InvalidPhpVersion extends \Exception
+use Exception;
+
+class InvalidPhpVersion extends Exception
 {
     // Placeholder for possible future use.
 }

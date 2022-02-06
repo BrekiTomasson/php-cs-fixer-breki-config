@@ -1,3 +1,4 @@
 # PHP and IDE files should be ignored
 
 vendor
+composer.lock

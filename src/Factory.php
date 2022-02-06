@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace BrekiTomasson\PhpCsFixer\Config;
 
 use BrekiTomasson\PhpCsFixer\Config\Exceptions\InvalidPhpVersion;
@@ -7,11 +9,6 @@ use PhpCsFixer\Config;
 
 class Factory
 {
-    /**
-     * Provide a configuration based on a given RuleSet with optional overrides.
-     *
-     * @throws InvalidPhpVersion
-     */
     public static function fromRuleSet(RuleSet $ruleSet, array $overrideRuleSet = []) : Config
     {
         self::assertPhpVersion($ruleSet->getTargetPhpVersion());
@@ -29,8 +26,6 @@ class Factory
     }
 
     /**
-     * @throws InvalidPhpVersion
-     *
      * @see PHP_VERSION_ID in https://www.php.net/manual/en/reserved.constants.php
      */
     protected static function assertPhpVersion(int $ruleSetPhpVersion) : void
