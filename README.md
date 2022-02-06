@@ -1,6 +1,7 @@
 # php-cs-fixer-breki-config
 
 [![Check & fix styling](https://github.com/BrekiTomasson/php-cs-fixer-breki-config/actions/workflows/php_cs_fixer.yml/badge.svg?event=push)](https://github.com/BrekiTomasson/php-cs-fixer-breki-config/actions/workflows/php_cs_fixer.yml)
+
 My own personal preferences for `php-cs-fixer` configuration. This is largely based on legibility and being able to
 understand the code quickly when reading it and places no emphasis on being compact, minimalistic or anything like that.
 
