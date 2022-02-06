@@ -1,10 +1,8 @@
 <?php
 
-use BrekiTomasson\PhpCsFixer\Config;
+$ruleSet = new BrekiTomasson\PhpCsFixer\Config\RuleSet\Php8;
 
-$ruleSet = new Config\RuleSet\Php8;
-
-$configuration = Config\Factory::fromRuleSet($ruleSet);
+$configuration = BrekiTomasson\PhpCsFixer\Config\Factory::fromRuleSet($ruleSet);
 
 $configuration->getFinder()->in('src');
 
