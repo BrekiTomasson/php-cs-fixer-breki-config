@@ -6,9 +6,6 @@ namespace BrekiTomasson\PhpCsFixer\Config\RuleSet;
 
 use BrekiTomasson\PhpCsFixer\Config\RuleSet;
 
-/**
- * @see https://github.com/ergebnis/php-cs-fixer-config/blob/main/src/RuleSet/AbstractRuleSet.php
- */
 abstract class RulesetAbstract implements RuleSet
 {
     /** A list of tags that should be ignored by fixers related to Doctrine. */
