@@ -16,9 +16,9 @@ class Php8 extends RulesetAbstract
         'strict_param'         => true,
 
         // Unsorted/Other rules.
-        '@PSR2'  => true,
+        '@PSR2'                                    => true,
         'assign_null_coalescing_to_coalesce_equal' => true,
-        'braces' => [
+        'braces'                                   => [
             'allow_single_line_closure'                         => true,
             'allow_single_line_anonymous_class_with_empty_body' => true,
         ],
