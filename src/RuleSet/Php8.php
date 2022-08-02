@@ -17,6 +17,7 @@ class Php8 extends RulesetAbstract
 
         // Unsorted/Other rules.
         '@PSR2'  => true,
+        'assign_null_coalescing_to_coalesce_equal' => true,
         'braces' => [
             'allow_single_line_closure'                         => true,
             'allow_single_line_anonymous_class_with_empty_body' => true,
@@ -304,7 +305,7 @@ class Php8 extends RulesetAbstract
         ],
         'switch_case_space'               => true,
         'ternary_operator_spaces'         => true,
-        'types_spaces'                    => ['space' => 'single'],
+        'types_spaces'                    => ['space' => 'none'],
         'unary_operator_spaces'           => true,
         'whitespace_after_comma_in_array' => true,
 

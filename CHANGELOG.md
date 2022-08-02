@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.1 (2022-08-02)
+
+- Added 'assign_null_coalescing_to_coalesce_equal' rule.
+- Changed `types_spaces` from `single` to `none`.
+
 ## v1.1.0 (2022-02-06)
 
 First minor release since I released this package. While none of the changes should be breaking, the fact that there have been multiple, and quite extensive,
