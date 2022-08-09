@@ -16,9 +16,9 @@ class Php8 extends RulesetAbstract
         'strict_param'         => true,
 
         // Unsorted/Other rules.
-        '@PSR2'  => true,
+        '@PSR2'                                    => true,
         'assign_null_coalescing_to_coalesce_equal' => true,
-        'braces' => [
+        'braces'                                   => [
             'allow_single_line_closure'                         => true,
             'allow_single_line_anonymous_class_with_empty_body' => true,
         ],
@@ -62,7 +62,6 @@ class Php8 extends RulesetAbstract
         'no_mixed_echo_print'                     => ['use' => 'echo'],
         'no_short_bool_cast'                      => true,
         'no_trailing_comma_in_list_call'          => true,
-        'protected_to_private'                    => true,
         'set_type_to_cast'                        => true,
         'short_scalar_cast'                       => true,
         'simplified_if_return'                    => true,
@@ -190,7 +189,7 @@ class Php8 extends RulesetAbstract
         // Rules relating to return notation.
         'no_useless_return'      => true,
         'return_assignment'      => true,
-        'simplified_null_return' => true,
+        'simplified_null_return' => false,
 
         // Rules relating to arrays.
         'array_indentation'                     => true,
@@ -207,7 +206,6 @@ class Php8 extends RulesetAbstract
             'operators' => [
                 '&&' => 'align_single_space_minimal',
                 '||' => 'align_single_space_minimal',
-                '=>' => 'align_single_space_minimal',
             ],
         ],
         'cast_spaces'      => true,
@@ -342,8 +340,8 @@ class Php8 extends RulesetAbstract
                 'curly_brace_block',
                 'default',
                 'extra',
-                'square_brace_block',
                 'return',
+                'square_brace_block',
                 'throw',
                 'use',
             ],
@@ -373,7 +371,7 @@ class Php8 extends RulesetAbstract
         ],
         'no_empty_phpdoc'                     => true,
         'no_superfluous_phpdoc_tags'          => true,
-        'phpdoc_add_missing_param_annotation' => ['only_untyped' => false],
+        'phpdoc_add_missing_param_annotation' => ['only_untyped' => true],
         'phpdoc_align'                        => [
             'align' => 'vertical',
             'tags'  => [
@@ -483,7 +481,7 @@ class Php8 extends RulesetAbstract
             'groups' => ['alias', 'meta', 'simple'],
         ],
         'phpdoc_types_order' => [
-            'null_adjustment' => 'always_first',
+            'null_adjustment' => 'always_last',
             'sort_algorithm'  => 'alpha',
         ],
         'phpdoc_var_annotation_correct_order' => true,
