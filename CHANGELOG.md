@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.2 (2022-09-12)
+
+- Changed `return_type_declaration['space_before']` from `one` to `none`.
+
 ## v1.1.1 (2022-08-02)
 
 - Added 'assign_null_coalescing_to_coalesce_equal' rule.

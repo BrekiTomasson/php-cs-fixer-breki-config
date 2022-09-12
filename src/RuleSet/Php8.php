@@ -244,7 +244,7 @@ class Php8 extends RulesetAbstract
             'only_booleans' => false,
             'position' => 'beginning',
         ],
-        'return_type_declaration' => ['space_before' => 'one'],
+        'return_type_declaration' => ['space_before' => 'none'],
         'single_space_after_construct' => [
             'constructs' => [
                 'abstract',
