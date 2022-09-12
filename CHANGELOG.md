@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.1.2 (2022-09-12)
+## v1.1.4 (2022-09-12)
 
 - Changed `return_type_declaration['space_before']` from `one` to `none`.
 
