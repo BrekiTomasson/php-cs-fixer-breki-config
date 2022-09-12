@@ -6,9 +6,9 @@ namespace BrekiTomasson\PhpCsFixer\Config;
 
 interface RuleSet
 {
-    public function getName() : string;
+    public function getName(): string;
 
-    public function getRules() : array;
+    public function getRules(): array;
 
-    public function getTargetPhpVersion() : int;
+    public function getTargetPhpVersion(): int;
 }

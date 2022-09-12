@@ -121,17 +121,17 @@ abstract class RulesetAbstract implements RuleSet
         ];
     }
 
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getRules() : array
+    public function getRules(): array
     {
         return $this->rules;
     }
 
-    public function getTargetPhpVersion() : int
+    public function getTargetPhpVersion(): int
     {
         return $this->targetPhpVersion;
     }

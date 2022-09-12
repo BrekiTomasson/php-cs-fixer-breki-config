@@ -12,7 +12,7 @@ class Factory
     /**
      * @throws InvalidPhpVersion
      */
-    public static function fromRuleSet(RuleSet $ruleSet, array $overrideRuleSet = []) : Config
+    public static function fromRuleSet(RuleSet $ruleSet, array $overrideRuleSet = []): Config
     {
         self::assertPhpVersion($ruleSet->getTargetPhpVersion());
 
@@ -33,7 +33,7 @@ class Factory
      *
      * @throws InvalidPhpVersion
      */
-    protected static function assertPhpVersion(int $ruleSetPhpVersion) : void
+    protected static function assertPhpVersion(int $ruleSetPhpVersion): void
     {
         if (\PHP_VERSION_ID < $ruleSetPhpVersion) {
             throw new InvalidPhpVersion(
