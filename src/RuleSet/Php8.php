@@ -417,19 +417,18 @@ class Php8 extends RulesetAbstract
         'phpdoc_no_empty_return' => true,
         'phpdoc_no_package' => true,
         'phpdoc_no_useless_inheritdoc' => true,
-        'phpdoc_order' =>
-            [
-                'order' => [
-                    'param',
-                    'property',
-                    'property-read',
-                    'property-write',
-                    'method',
-                    'mixin',
-                    'throws',
-                    'return',
-                ],
+        'phpdoc_order' => [
+            'order' => [
+                'param',
+                'property',
+                'property-read',
+                'property-write',
+                'method',
+                'mixin',
+                'throws',
+                'return',
             ],
+        ],
         'phpdoc_order_by_value' => true,
         'phpdoc_return_self_reference' => true,
         'phpdoc_scalar' => true,

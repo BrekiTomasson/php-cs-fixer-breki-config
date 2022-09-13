@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace BrekiTomasson\PhpCsFixer\Config\RuleSet;
 
 use BrekiTomasson\PhpCsFixer\Config\RuleSet;
+use function trim;
 
 abstract class RulesetAbstract implements RuleSet
 {
@@ -115,7 +116,7 @@ abstract class RulesetAbstract implements RuleSet
 
         $this->rules['header_comment'] = [
             'comment_type' => 'PHPDoc',
-            'header' => \trim($header),
+            'header' => trim($header),
             'location' => 'after_declare_strict',
             'separate' => 'both',
         ];
