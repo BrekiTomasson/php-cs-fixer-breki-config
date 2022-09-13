@@ -1,8 +1,29 @@
 # Changelog
 
+## v1.1.5 (2022-02-13)
+
+- Added `control_structure_continuation_position` rule.
+- Added `phpdoc_tag_casing` rule.
+- Changed `'phpdoc_line_span['method']` from `multi` to `single`.
+- Changed order of contents in `phpdoc_separation['groups']`.
+- Restored `phpdoc_order_by_value` to default values.
+- Restored `phpdoc_return_self_reference` to default values.
+- Restored `phpdoc_scalar` to default values.
+- Restored `phpdoc_tag_type` to default values.
+- Updated `phpdoc_order` to cover more annotations.
+
 ## v1.1.4 (2022-09-12)
 
 - Changed `return_type_declaration['space_before']` from `one` to `none`.
+
+## v1.1.3 (2022-08-10)
+
+- No new features or changes, only minor code refactoring behind the scenes.
+
+## v1.1.2 (2022-08-09)
+
+- Minor tweaks to aligning `=>` statements
+- Fixes to rule that would incorrectly remove `return null` statements.
 
 ## v1.1.1 (2022-08-02)
 
