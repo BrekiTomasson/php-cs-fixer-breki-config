@@ -23,7 +23,7 @@ class Php8 extends RulesetAbstract
         ],
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
-        'declare_equal_normalize' => ['space' => 'single'],
+        'declare_equal_normalize' => ['space' => 'none'],
         'dir_constant' => true,
         'echo_tag_syntax' => [
             'format' => 'long',
