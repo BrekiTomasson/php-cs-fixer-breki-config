@@ -1,6 +1,10 @@
 # Changelog
 
-## v1.1.5 (2022-02-13)
+## v1.1.6 (2022-09-21)
+
+- Restored `declare_equal_normalize['space']` to `'none'`.
+
+## v1.1.5 (2022-09-13)
 
 - Added `control_structure_continuation_position` rule.
 - Added `phpdoc_tag_casing` rule.
