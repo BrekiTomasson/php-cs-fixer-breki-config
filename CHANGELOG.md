@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.7 (2022-09-26)
+
+- Replaced deprecated rules `no_trailing_comma_in_list_call` and `no_trailing_comma_in_singleline_array` with `no_trailing_comma_in_singleline`.
+
 ## v1.1.6 (2022-09-21)
 
 - Restored `declare_equal_normalize['space']` to `'none'`.
