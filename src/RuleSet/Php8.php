@@ -199,7 +199,7 @@ class Php8 extends RulesetAbstract
         'array_push' => true,
         'array_syntax' => ['syntax' => 'short'],
         'list_syntax' => ['syntax' => 'short'],
-        
+
         'normalize_index_brace' => true,
         'trim_array_spaces' => true,
 
@@ -236,12 +236,12 @@ class Php8 extends RulesetAbstract
         ],
         'no_spaces_inside_parenthesis' => true,
         'no_trailing_comma_in_singleline' => [
-          'elements' => [
-              'arguments',
-              'array_destructuring',
-              'array',
-              'group_import',
-          ]
+            'elements' => [
+                'arguments',
+                'array_destructuring',
+                'array',
+                'group_import',
+            ],
         ],
         'no_trailing_whitespace' => true,
         'no_whitespace_before_comma_in_array' => true,
