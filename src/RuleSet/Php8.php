@@ -60,7 +60,6 @@ class Php8 extends RulesetAbstract
         'no_leading_import_slash' => true,
         'no_mixed_echo_print' => ['use' => 'echo'],
         'no_short_bool_cast' => true,
-        'no_trailing_comma_in_list_call' => true,
         'set_type_to_cast' => true,
         'short_scalar_cast' => true,
         'simplified_if_return' => true,
@@ -200,7 +199,7 @@ class Php8 extends RulesetAbstract
         'array_push' => true,
         'array_syntax' => ['syntax' => 'short'],
         'list_syntax' => ['syntax' => 'short'],
-        'no_trailing_comma_in_singleline_array' => true,
+        
         'normalize_index_brace' => true,
         'trim_array_spaces' => true,
 
@@ -236,6 +235,14 @@ class Php8 extends RulesetAbstract
             'positions' => ['inside', 'outside'],
         ],
         'no_spaces_inside_parenthesis' => true,
+        'no_trailing_comma_in_singleline' => [
+          'elements' => [
+              'arguments',
+              'array_destructuring',
+              'array',
+              'group_import',
+          ]
+        ],
         'no_trailing_whitespace' => true,
         'no_whitespace_before_comma_in_array' => true,
         'not_operator_with_space' => false,
