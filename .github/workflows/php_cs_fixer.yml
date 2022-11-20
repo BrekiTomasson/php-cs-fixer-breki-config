@@ -13,7 +13,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Setup PHP
-        uses: "shivammathur/setup-php@2.16.0"
+        uses: shivammathur/setup-php@v2
         with:
           coverage: "none"
           php-version: '8.1'
@@ -29,5 +29,5 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: php-cs-fixer has fixed php-cs-fixer.
+          commit_message: Very meta, php-cs-fixer has fixed php-cs-fixer.
 
