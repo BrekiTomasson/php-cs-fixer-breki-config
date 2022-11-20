@@ -65,7 +65,7 @@ class Php8 extends RulesetAbstract
         'simplified_if_return' => true,
         'standardize_increment' => true,
         'standardize_not_equals' => true,
-        'static_lambda' => true,
+        'static_lambda' => false,
         'switch_case_semicolon_to_colon' => true,
         'switch_continue_to_break' => true,
         'ternary_to_null_coalescing' => true,
