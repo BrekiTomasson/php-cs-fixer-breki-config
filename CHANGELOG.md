@@ -1,8 +1,17 @@
 # Changelog
 
+## v1.1.8 (2022-11-30)
+
+- Added `no_useless_concat_operator` rule.
+- Began work on sorting the rules better in `Php8.php`.
+- Changed `imports_order` from `['class', 'const', 'function']` to `['class', 'function', 'const']`.
+- Set `case_sensitive` to `false` in `general_phpdoc_annotation_remove`.
+- Updated `function_declaration` to require `none` for `closure_fn_spacing` and `one` for `closure_function_spacing`.
+
 ## v1.1.7 (2022-09-26)
 
-- Replaced deprecated rules `no_trailing_comma_in_list_call` and `no_trailing_comma_in_singleline_array` with `no_trailing_comma_in_singleline`.
+- Replaced deprecated rules `no_trailing_comma_in_list_call` and `no_trailing_comma_in_singleline_array`
+  with `no_trailing_comma_in_singleline`.
 
 ## v1.1.6 (2022-09-21)
 
@@ -40,8 +49,10 @@
 
 ## v1.1.0 (2022-02-06)
 
-First minor release since I released this package. While none of the changes should be breaking, the fact that there have been multiple, and quite extensive,
-changes to the rules makes this release no longer a candidate for a simple patch release. That said, code formatted using `v1.0.2` should still come out looking
+First minor release since I released this package. While none of the changes should be breaking, the fact that there
+have been multiple, and quite extensive,
+changes to the rules makes this release no longer a candidate for a simple patch release. That said, code formatted
+using `v1.0.2` should still come out looking
 more or less the same as code formatted using `v1.1.0`, with two major differences:
 
 1. `v1.1.0` introduces a set of sorting rules for the contents of a class.

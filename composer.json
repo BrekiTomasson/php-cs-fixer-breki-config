@@ -25,6 +25,6 @@
   "require": {
     "php": "^8.0",
     "ext-filter": "*",
-    "friendsofphp/php-cs-fixer": "^v3.5"
+    "friendsofphp/php-cs-fixer": "^v3.13"
   }
 }

@@ -4,15 +4,39 @@ declare(strict_types=1);
 
 namespace BrekiTomasson\PhpCsFixer\Config\RuleSet;
 
+/**
+ * List of rules.
+ *
+ * As this file is rapidly growing unwieldy, it might be a good idea, down the line, to break it up into multiple files
+ * that are imported separately. For now, an ongoing work is to group all of the rules under the headings defined in
+ * https://cs.symfony.com/doc/rules/index.html to make the file more manageable.
+ */
 class Php8 extends RulesetAbstract
 {
     protected string $name = "Breki's RuleSet for PHP 8.x";
 
     protected array $rules = [
-        // Strict rules.
+        // Strict Rules.
         'declare_strict_types' => true,
         'strict_comparison' => true,
         'strict_param' => true,
+
+        // Casing.
+        'constant_case' => ['case' => 'lower'],
+        'lowercase_keywords' => true,
+        'lowercase_static_reference' => true,
+        'magic_constant_casing' => true,
+        'magic_method_casing' => true,
+        'native_function_casing' => true,
+        'native_function_type_declaration_casing' => true,
+
+        // Cast Notation.
+        'lowercase_cast' => true,
+        'cast_spaces' => true,
+        'modernize_types_casting' => true,
+        'no_short_bool_cast' => true,
+        'no_unset_cast' => true,
+        'short_scalar_cast' => true,
 
         // Unsorted/Other rules.
         '@PSR2' => true,
@@ -34,6 +58,7 @@ class Php8 extends RulesetAbstract
         'fully_qualified_strict_types' => true,
         'function_declaration' => [
             'closure_function_spacing' => 'one',
+            'closure_fn_spacing' => 'none',
         ],
         'function_to_constant' => [
             'functions' => [
@@ -49,19 +74,14 @@ class Php8 extends RulesetAbstract
         'is_null' => true,
         'lambda_not_used_import' => true,
         'logical_operators' => true,
-        'modernize_types_casting' => true,
         'method_chaining_indentation' => true,
-        'native_function_casing' => true,
-        'native_function_type_declaration_casing' => true,
         'no_alias_language_construct_call' => true,
         'no_alternative_syntax' => true,
         'no_break_comment' => ['comment_text' => 'No break, cascades'],
         'no_homoglyph_names' => true,
         'no_leading_import_slash' => true,
         'no_mixed_echo_print' => ['use' => 'echo'],
-        'no_short_bool_cast' => true,
         'set_type_to_cast' => true,
-        'short_scalar_cast' => true,
         'simplified_if_return' => true,
         'standardize_increment' => true,
         'standardize_not_equals' => true,
@@ -74,9 +94,7 @@ class Php8 extends RulesetAbstract
             'elements' => ['arguments', 'arrays', 'parameters'],
         ],
         'use_arrow_functions' => true,
-        'visibility_required' => [
-            'elements' => ['const', 'method', 'property'],
-        ],
+        'visibility_required' => ['elements' => ['const', 'method', 'property']],
         'void_return' => true,
 
         // Rules related to overall file structure and design.
@@ -131,7 +149,7 @@ class Php8 extends RulesetAbstract
             'sort_algorithm' => 'alpha',
         ],
         'ordered_imports' => [
-            'imports_order' => ['class', 'const', 'function'],
+            'imports_order' => ['class', 'function', 'const'],
             'sort_algorithm' => 'alpha',
         ],
         'ordered_interfaces' => [
@@ -143,14 +161,6 @@ class Php8 extends RulesetAbstract
         'single_import_per_statement' => true,
         'single_line_after_imports' => true,
 
-        // Rules related to uppercase and lowercase.
-        'constant_case' => ['case' => 'lower'],
-        'lowercase_cast' => true,
-        'lowercase_keywords' => true,
-        'lowercase_static_reference' => true,
-        'magic_constant_casing' => true,
-        'magic_method_casing' => true,
-
         // Rules related to string notation.
         'escape_implicit_backslashes' => [
             'double_quoted' => true,
@@ -161,6 +171,9 @@ class Php8 extends RulesetAbstract
         'heredoc_to_nowdoc' => true,
         'no_binary_string' => true,
         'no_trailing_whitespace_in_string' => false,
+        'no_useless_concat_operator' => [
+            'juggle_simple_strings' => true,
+        ],
         'simple_to_complex_string_variable' => false,
         'single_quote' => ['strings_containing_single_quote_chars' => false],
 
@@ -177,7 +190,6 @@ class Php8 extends RulesetAbstract
             ],
         ],
         'no_unneeded_curly_braces' => true,
-        'no_unset_cast' => true,
         'no_unused_imports' => true,
         'no_useless_else' => true,
 
@@ -211,7 +223,6 @@ class Php8 extends RulesetAbstract
                 '||' => 'align_single_space_minimal',
             ],
         ],
-        'cast_spaces' => true,
         'class_definition' => [
             'multi_line_extends_each_single_line' => true,
             'single_item_single_line' => true,
@@ -373,6 +384,7 @@ class Php8 extends RulesetAbstract
         // Rules relating to phpdoc.
         'general_phpdoc_annotation_remove' => [
             'annotations' => ['package', 'subpackage'],
+            'case_sensitive' => false,
         ],
         'general_phpdoc_tag_rename' => [
             'fix_annotation' => true,
