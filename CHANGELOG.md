@@ -1,12 +1,16 @@
 # Changelog
 
-## v1.1.8 (2022-11-30)
+## v1.1.9 (2022-11-30)
 
 - Added `no_useless_concat_operator` rule.
 - Began work on sorting the rules better in `Php8.php`.
 - Changed `imports_order` from `['class', 'const', 'function']` to `['class', 'function', 'const']`.
 - Set `case_sensitive` to `false` in `general_phpdoc_annotation_remove`.
 - Updated `function_declaration` to require `none` for `closure_fn_spacing` and `one` for `closure_function_spacing`.
+
+## v1.1.8 (2022-11-20)
+
+- Disabled `static_lambda` rule.
 
 ## v1.1.7 (2022-09-26)
 
