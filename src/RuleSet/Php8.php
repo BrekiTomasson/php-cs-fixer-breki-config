@@ -18,6 +18,7 @@ class Php8 extends RulesetAbstract
     protected array $rules = [
         // Strict Rules.
         'declare_strict_types' => true,
+        'declare_parentheses' => true,
         'strict_comparison' => true,
         'strict_param' => true,
 
@@ -28,7 +29,7 @@ class Php8 extends RulesetAbstract
         'magic_constant_casing' => true,
         'magic_method_casing' => true,
         'native_function_casing' => true,
-        'native_function_type_declaration_casing' => true,
+        'native_type_declaration_casing' => true,
 
         // Cast Notation.
         'lowercase_cast' => true,
@@ -41,10 +42,6 @@ class Php8 extends RulesetAbstract
         // Unsorted/Other rules.
         '@PSR2' => true,
         'assign_null_coalescing_to_coalesce_equal' => true,
-        'braces' => [
-            'allow_single_line_closure' => true,
-            'allow_single_line_anonymous_class_with_empty_body' => true,
-        ],
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'declare_equal_normalize' => ['space' => 'none'],
@@ -99,6 +96,7 @@ class Php8 extends RulesetAbstract
 
         // Rules related to overall file structure and design.
         'clean_namespace' => true,
+        'control_structure_braces' => true,
         'control_structure_continuation_position' => true,
         'encoding' => true,
         'full_opening_tag' => true,
@@ -162,10 +160,10 @@ class Php8 extends RulesetAbstract
         'single_line_after_imports' => true,
 
         // Rules related to string notation.
-        'escape_implicit_backslashes' => [
-            'double_quoted' => true,
-            'heredoc_syntax' => true,
-            'single_quoted' => false,
+        'string_implicit_backslashes' => [
+            'double_quoted' => 'escape',
+            'heredoc' => 'escape',
+            'single_quoted' => 'unescape',
         ],
         'explicit_string_variable' => true,
         'heredoc_to_nowdoc' => true,
@@ -189,12 +187,13 @@ class Php8 extends RulesetAbstract
                 'yield',
             ],
         ],
-        'no_unneeded_curly_braces' => true,
+        'no_unneeded_braces' => true,
         'no_unused_imports' => true,
         'no_useless_else' => true,
 
         // Rules relating to semicolon use.
         'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
+        'no_multiple_statements_per_line' => true,
         'no_empty_statement' => true,
         'semicolon_after_instruction' => true,
         'space_after_semicolon' => [
@@ -228,9 +227,9 @@ class Php8 extends RulesetAbstract
             'single_item_single_line' => true,
             'single_line' => true,
         ],
-        'compact_nullable_typehint' => true,
+        'compact_nullable_type_declaration' => true,
         'concat_space' => ['spacing' => 'one'],
-        'function_typehint_space' => true,
+        'type_declaration_spaces' => true,
         'include' => true,
         'method_argument_space' => [
             'keep_multiple_spaces_after_comma' => false,
@@ -245,7 +244,9 @@ class Php8 extends RulesetAbstract
         'no_spaces_around_offset' => [
             'positions' => ['inside', 'outside'],
         ],
-        'no_spaces_inside_parenthesis' => true,
+        'spaces_inside_parentheses' => [
+            'space' => 'none',
+        ],
         'no_trailing_comma_in_singleline' => [
             'elements' => [
                 'arguments',
@@ -264,8 +265,8 @@ class Php8 extends RulesetAbstract
             'position' => 'beginning',
         ],
         'return_type_declaration' => ['space_before' => 'none'],
-        'single_space_after_construct' => [
-            'constructs' => [
+        'single_space_around_construct' => [
+            'constructs_followed_by_a_single_space' => [
                 'abstract',
                 'as',
                 'attribute',
@@ -370,7 +371,10 @@ class Php8 extends RulesetAbstract
         ],
         'no_whitespace_in_blank_line' => true,
         'single_blank_line_at_eof' => true,
-        'single_blank_line_before_namespace' => true,
+        'blank_lines_before_namespace' => [
+            'max_line_breaks' => 2,
+            'min_line_breaks' => 2,
+        ],
 
         // Rules relating to comments and commenting.
         'align_multiline_comment' => ['comment_type' => 'all_multiline'],
