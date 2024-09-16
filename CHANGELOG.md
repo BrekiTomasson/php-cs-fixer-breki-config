@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.10 (2024-09-16)
+
+- Replaced deprecated rules with their updated equivalents.
+
 ## v1.1.9 (2022-11-30)
 
 - Added `no_useless_concat_operator` rule.
